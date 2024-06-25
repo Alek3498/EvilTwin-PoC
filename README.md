@@ -99,9 +99,9 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *env &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Here, you declare interfaces*
 
-*whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist. *
+*whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist.*
 
-*README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This file*
+*README.md # This file*
 
 *01-mitmproxy-CAcert.png*
 
