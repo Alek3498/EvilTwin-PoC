@@ -95,9 +95,9 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *../EvilTwin-PoC/*
 
-*03-EvilTwin.sh emsp #Script to implement the rogue AP*
+*03-EvilTwin.sh &emsp #Script to implement the rogue AP*
 
-*env emsp # Here, you declare interfaces*
+*env &emsp # Here, you declare interfaces*
 
 *whitelist.cnf			# Client Whitelist. *
 
