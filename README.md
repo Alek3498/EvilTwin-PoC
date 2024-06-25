@@ -3,12 +3,12 @@
 
 ## Introduction
 
-This is a simple PoC (Proof of Concept) of a implementation of a rouge AP and what we can get from it. I didn't explore all the options available. I just got focus on intercepting HTTP and HTTPS traffic and how to do it.
+This is a simple PoC (Proof of Concept) of a implementation of a rogue AP and what we can get from it. I didn't explore all the options available. I just got focus on intercepting HTTP and HTTPS traffic and how to do it.
 The rougue AP was setup to broadcast a Open network (no encryption) to avoid issues not related to the main objetive of this test.
 
 ## Objectives
 
-1. Interception of HTTP and HTTPS traffic by implementing a rougue AP and a mitm proxy.
+1. Interception of HTTP and HTTPS traffic by implementing a rogue AP and a mitm proxy.
 
 2. Get used with the airbase-ng and mitmproxy utilities and its options.
 
@@ -25,7 +25,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 ## Scope of the PoC
 
-1. All test were done with the rougue AP broadcasting a Open Network.
+1. All test were done with the rogue AP broadcasting a Open Network.
 
 2. The CA certificate used was the provided by the mitmproxy utility. 
 
@@ -43,16 +43,16 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 ## What do I need to run this PoC
 
-1. The rougue AP is implemented by airbase-ng which is part of the aircrack-ng suite. So, you need to install it by doing:
+1. The rogue AP is implemented by airbase-ng which is part of the aircrack-ng suite. So, you need to install it by doing:
 	sudo  apt install aircrack-ng
 
-2. That rougue AP need a DHCP server. So, you need to install it by doing:
+2. That rogue AP need a DHCP server. So, you need to install it by doing:
 	sudo apt install isc-dhcp-server
 	
 3. To see all the intercepted traffic you will need the mitmproxy. So, install it by doing:
 	sudo apt install mitmproxy
 
-4. Because this is a rougue AP it means that it has a wireless interface to allow clients to connect and another interface (it could be wireless or not) to internet.
+4. Because this is a rogue AP it means that it has a wireless interface to allow clients to connect and another interface (it could be wireless or not) to internet.
 
 5. The wireless interface must be compatible with the monitor mode. So, choose a right HW before going to this PoC. Not all wireless interfaces are compatible with the monitor mode.
 
@@ -75,11 +75,11 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 ## Final notes
 
-1. The script that implement this AP has the option to broadcast a WPA2/CCMP rougue AP but airebase-ng has no option to configure the password. So, it will ask for password and won't let you to connect to the AP network.
+1. The script that implement this AP has the option to broadcast a WPA2/CCMP rogue AP but airebase-ng has no option to configure the password. So, it will ask for password and won't let you to connect to the AP network.
 
 2. According to internet sources (I forgot the URLs), point 1 could be implemented using hostapd along with the airbase-ng. I never tried it.
 
-3. There are many options to implement a rougue AP I just focus on the aircrack-ng suite. You can give a try to airgeddon. I didn't do it because I got a awkward HW error on my wireless adaptor.
+3. There are many options to implement a rogue AP I just focus on the aircrack-ng suite. You can give a try to airgeddon. I didn't do it because I got a awkward HW error on my wireless adaptor.
 
 
 ## EvilTwin options
@@ -101,7 +101,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist. *
 
-*README.md&nbsp;&nbsp;&nbsp;&nbsp;# This file*
+*README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This file*
 
 *01-mitmproxy-CAcert.png*
 
