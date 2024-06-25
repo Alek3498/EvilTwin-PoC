@@ -124,7 +124,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 *09-mitmproxy-login_sniffing-original_certs_details-imperva-site-01.png*
 
 
-*Notes:*
+***Notes:***
 1. All png files are screenshots taken during the testings that 
 proof that this PoC works 
 
