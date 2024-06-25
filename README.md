@@ -38,8 +38,8 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 6. Test a https site with login and capture the credentials.
 
 
-**Note:
-- The victim laptop was a laptop on my lab were I manually deployed the certificated.**
+**Note:**
+**- The victim laptop was a laptop on my lab were I manually deployed the certificated.**
 
 ## What do I need to run this PoC
 
