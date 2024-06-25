@@ -33,9 +33,9 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 4. The mitmproxy's CA certificate was deployed on the firefox browser iof the victim laptop.
 
-5- Test a https site with no login
+5. Test a https site with no login
 
-6- Test a https site with login and capture the credentials.
+6. Test a https site with login and capture the credentials.
 
 
 **Note:
