@@ -18,7 +18,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 2. Implement dns spoofing (dnschef)
 
-3. Implemet a WPA2/CCMP rougue AP
+3. Implement a WPA2/CCMP rogue AP
 
 4. Generate a CA certificate with our own PKI and deploy it on the mitmproxy and victim.
 
@@ -56,17 +56,29 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 5. The wireless interface must be compatible with the monitor mode. So, choose a right HW before going to this PoC. Not all wireless interfaces are compatible with the monitor mode.
 
-6. Also choose a 8dbi antenna that will be good for all the testing. A normal 1 dbi will work as well but I suppose you would want to see what is around you.
+6. Also choose a 8 dbi antenna that will be good for all the testing. A normal 1 dbi will work as well but I suppose you would want to see what is around you.
 
 
 ## How to run this PoC
 
-1. If all the tools we need are already installed, then run the following
+1. Edit file ***./env***. There you need to define your environment
 
-	./03-EvilTwin.sh -e RougueAP
+2. If all the tools we need are already installed, then run the following
 
+	./03-EvilTwin.sh -e RogueAP
+
+or
+	./03-EvilTwin.sh -e RogueAP -c 11
+
+or
+	./03-EvilTwin.sh -e RogueAP -c 11 -b 34:56:fb:de:20:11
+
+or
+	./03-EvilTwin.sh -e RogueAP -c 11 -b 34:56:fb:de:20:11 -t wpa2
+
+ 
 *Notes:*
-1. You can add more option but this is the simple way to running it
+1. Here some examples of how to run it. Remember if your choice is wpa2 your clients won't connect to the AP.
 
 2. Once the airbase-ng is running, launch the mitmproxy with the following line:
 
