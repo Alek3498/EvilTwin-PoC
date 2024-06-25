@@ -65,7 +65,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 	./03-EvilTwin.sh -e RougueAP
 
-*Note:*
+*Notes:*
 1. You can add more option but this is the simple way to running it
 
 2. Once the airbase-ng is running, launch the mitmproxy with the following line:
@@ -86,10 +86,10 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *Usage: ./03-EvilTwin.sh -c channel -e essid -b bssid -t AP-type*
 
-     *-c channel: AP channel to listen to (Optional, Default ch 1)*
+      -c channel: AP channel to listen to (Optional, Default ch 1)
       -e essid: AP's Network ID
       -b bssid: AP's MAC (Optional, default wireless interface's MAC)
-      -t AP-type: OPN|WPA2 (Optional, default OPN=Open)*
+      -t AP-type: OPN|WPA2 (Optional, default OPN=Open)
 
 
 	
