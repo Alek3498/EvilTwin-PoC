@@ -95,11 +95,11 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *../EvilTwin-PoC/*
 
-*03-EvilTwin.sh&nbsp;&nbsp;&nbsp;&nbsp;# Script to implement the rogue AP*
+*03-EvilTwin.sh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Script to implement the rogue AP*
 
-*env &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Here, you declare interfaces*
+*env&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Here, you declare interfaces*
 
-*whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist.*
+*whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist.*
 
 *README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This file*
 
