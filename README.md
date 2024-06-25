@@ -79,7 +79,7 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 2. According to internet sources (I forgot the URLs), point 1 could be implemented using hostapd along with the airbase-ng. I never tried it.
 
-3. There are many options to implement a rougue AP I just focus on the aircrack-ng suite. You can give a try to airgeddon. I didn't do it beacuse I got a awkward HW error on my wireless adaptor.
+3. There are many options to implement a rougue AP I just focus on the aircrack-ng suite. You can give a try to airgeddon. I didn't do it because I got a awkward HW error on my wireless adaptor.
 
 
 ## EvilTwin options
