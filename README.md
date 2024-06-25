@@ -95,23 +95,34 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 *../EvilTwin-PoC/*
 
-*03-EvilTwin.sh &nbsp;&nbsp;&nbsp; #Script to implement the rogue AP*
+*03-EvilTwin.sh&nbsp;&nbsp;&nbsp;&nbsp;# Script to implement the rogue AP*
 
-*env &nbsp;&nbsp;&nbsp; # Here, you declare interfaces*
+*env &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Here, you declare interfaces*
 
-*whitelist.cnf&nbsp;&nbsp;&nbsp;# Client Whitelist. *
+*whitelist.cnf&nbsp;&nbsp;&nbsp;&nbsp;# Client Whitelist. *
 
-*README.md		# This file*
+*README.md&nbsp;&nbsp;&nbsp;&nbsp;# This file*
+
 *01-mitmproxy-CAcert.png*
+
 *02-mitmproxy-http.png*
+
 *03-mitmproxy-browser-cyberChef-site-01.png*
+
 *04-mitmproxy-browser-cyberChef-site-02.png*
+
 *05-mitmproxy-cyberChef-original_cert_details-01.png*
+
 *06-mitmproxy-cyberChef-traffic-01.png*
+
 *07-mitmproxy-browser-login_sniffing-imperva-site-01.png*
+
 *08-mitmproxy-browser-login_sniffing-imperva-site-02.png*
+
 *09-mitmproxy-login_sniffing-details.png*
+
 *09-mitmproxy-login_sniffing-original_certs_details-imperva-site-01.png*
+
 
 *Notes:*
 1. All png files are screenshots taken during the testings that 
