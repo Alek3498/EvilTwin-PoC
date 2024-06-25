@@ -1,0 +1,9 @@
+#-------------------------
+# DEFINITIONS
+#-------------------------
+WLAN=wlan1 				# Wireless interface. Most be compatible with monitor mode
+ETH=eth0   				# Interface to internet. It could be wireless as well.
+defaultCH=1 			# Default channel for the fake AP if not selected
+IPT=/usr/sbin/iptables
+EBT=/usr/sbin/ebtables
+TIMER=3s 					# Delay between some commands

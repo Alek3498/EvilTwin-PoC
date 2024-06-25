@@ -91,13 +91,34 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
       -b bssid: AP's MAC (Optional, default wireless interface's MAC)
       -t AP-type: OPN|WPA2 (Optional, default OPN=Open)
 
+## Files
+
+../EvilTwin-PoC/
+03-EvilTwin.sh	#Script to implement the rogue AP
+env				# Here, you declare interfaces
+whitelist.cnf	# Client Whitelist. 
+README.md		# This file
+01-mitmproxy-CAcert.png
+02-mitmproxy-http.png
+03-mitmproxy-browser-cyberChef-site-01.png
+04-mitmproxy-browser-cyberChef-site-02.png
+05-mitmproxy-cyberChef-original_cert_details-01.png
+06-mitmproxy-cyberChef-traffic-01.png
+07-mitmproxy-browser-login_sniffing-imperva-site-01.png
+08-mitmproxy-browser-login_sniffing-imperva-site-02.png
+09-mitmproxy-login_sniffing-details.png
+09-mitmproxy-login_sniffing-original_certs_details-imperva-site-01.png
+
+*Notes:*
+1. All png files are screenshots taken during the testings that 
+proof that this PoC works 
 
 	
 ## HAPPY INTERCEPTION!!!	:-)
 	
 	
 
-	
+	i
 	
 	
 	

@@ -1,0 +1,12 @@
+#-------------------------
+# Client Whitelist
+#-------------------------
+# Include here those devices
+# you want to be able to 
+# connect to the fake AP.
+# This is optional. By default
+# the fake AP allow all clients
+# to connect
+#-------------------------
+client1MAC="c0:18:85:05:4f:ce"
+client2MAC="78:D6:DC:42:C8:66"

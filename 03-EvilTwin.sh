@@ -3,18 +3,10 @@
 # 20240620
 #
 #-------------------------
-# DEFINITIONS
+# INCLUDE
 #-------------------------
-IF=wlan1
-defaultCH=1
-IPT=/usr/sbin/iptables
-EBT=/usr/sbin/ebtables
-TIMER=3s
-#-------------------------
-# Client Whitelist
-client1MAC="c0:18:85:05:4f:ce"
-client2MAC="78:D6:DC:42:C8:66"
-#-------------------------
+source ./env
+source ./whitelist.cnf
 
 
 # To capture the interrupt event
@@ -117,23 +109,23 @@ function Monitor {
 	local option=$1
 	if [ $option -eq 1 ];then
 	  Separator
-		WlanInfo $IF
-		sudo ip link set dev $IF down
+		WlanInfo $WLAN
+		sudo ip link set dev $WLAN down
 	  Separator
 		sudo airmon-ng check kill;sleep $TIMER
 	  Separator
-		sudo airmon-ng start $IF;sleep $TIMER
+		sudo airmon-ng start $WLAN;sleep $TIMER
 	  Separator
-		sudo ip link set dev $IF up
-		WlanInfo $IF
+		sudo ip link set dev $WLAN up
+		WlanInfo $WLAN
 	  Separator;sleep $TIMER
 	else
 	  Separator
-		sudo ifconfig $IF down
-		sudo airmon-ng stop $IF
-		sudo ifconfig $IF up
+		sudo ifconfig $WLAN down
+		sudo airmon-ng stop $WLAN
+		sudo ifconfig $WLAN up
 	  Separator
-		WlanInfo $IF
+		WlanInfo $WLAN
 		sudo systemctl restart NetworkManager
 	  Separator
 	fi
@@ -157,9 +149,9 @@ function Iptables {
 		sudo $IPT --flush
 		#--------------------------------------------------------------------------
 		# Required to internet connection            
-		sudo $IPT -A FORWARD -i eth0 -o at0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-		sudo $IPT -A FORWARD -i at0 -o eth0 -j ACCEPT
-		sudo $IPT -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+		sudo $IPT -A FORWARD -i $ETH -o at0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+		sudo $IPT -A FORWARD -i at0 -o $ETH -j ACCEPT
+		sudo $IPT -t nat -A POSTROUTING -o $ETH -j MASQUERADE
 		#--------------------------------------------------------------------------
 		# Uncomment what is required
 		#--------------------------------------------------------------------------
@@ -256,7 +248,7 @@ function Helper {
 
 #Example 1
 # An open AP with SSID "@@@"
-# sudo airbase-ng -c 6 -e "@@@" $IF
+# sudo airbase-ng -c 6 -e "@@@" $WLAN
 
 	# if nothing is provided then...
 	if [ $# -eq 0 ]; then
@@ -327,10 +319,10 @@ function Helper {
 Monitor 1
 
 # Checking monitor mode on the interface	
-ret=$(MonitorModeCheck $IF)
+ret=$(MonitorModeCheck $WLAN)
 if [ $ret -eq 1  ]; then
 	Separator
-	echo "# Interface $IF must be in monitor mode to proceed. Exiting..."
+	echo "# Interface $WLAN must be in monitor mode to proceed. Exiting..."
 	Separator
 	exit 1 # Can't continue. Exiting... 
 fi
@@ -386,9 +378,9 @@ fi
 				if [ -z "$bssid" ]; then
 					# Open Network. The bssid will be the MAC of the 
 					# wireless interface
-					sudo airbase-ng -v -e $essid -c $channel $IF 
+					sudo airbase-ng -v -e $essid -c $channel $WLAN 
 				else
-					sudo airbase-ng -v -e $essid -c $channel -a $bssid  $IF 
+					sudo airbase-ng -v -e $essid -c $channel -a $bssid  $WLAN
 				fi
 		;;
 		wpa2 ) # WPA2/CCMP. Sadly there is not way to provide the password
@@ -399,9 +391,9 @@ fi
 				if [ -z "$bssid" ]; then
 					# WPA2. The bssid will be the MAC of the 
 					# wireless interface
-					sudo airbase-ng -v -e $essid -c $channel -Z 4 $IF 
+					sudo airbase-ng -v -e $essid -c $channel -Z 4 $WLAN 
 				else
-					sudo airbase-ng -v -e $essid -c $channel -a $bssid  -Z 4 $IF 
+					sudo airbase-ng -v -e $essid -c $channel -a $bssid  -Z 4 $WLAN
 				fi
 		;;
 	esac
