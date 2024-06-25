@@ -84,13 +84,13 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 
 ## EvilTwin options
 
-*Usage: ./03-EvilTwin.sh -c channel -e essid -b bssid -t AP-type
-      -c channel: AP channel to listen to (Optional, Default ch 1)
+*Usage: ./03-EvilTwin.sh -c channel -e essid -b bssid -t AP-type*
+
+     *-c channel: AP channel to listen to (Optional, Default ch 1)*
       -e essid: AP's Network ID
       -b bssid: AP's MAC (Optional, default wireless interface's MAC)
       -t AP-type: OPN|WPA2 (Optional, default OPN=Open)*
 
-	
 
 	
 # HAPPY INTERCEPTION!!!	:-)
