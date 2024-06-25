@@ -96,7 +96,9 @@ The rougue AP was setup to broadcast a Open network (no encryption) to avoid iss
 *../EvilTwin-PoC/*
 
 *03-EvilTwin.sh	#Script to implement the rogue AP*
+
 *env				# Here, you declare interfaces*
+
 *whitelist.cnf	# Client Whitelist. *
 *README.md		# This file*
 *01-mitmproxy-CAcert.png*
